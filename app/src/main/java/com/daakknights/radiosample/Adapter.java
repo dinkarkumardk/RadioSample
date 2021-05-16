@@ -25,6 +25,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     // creating a variable for array list and context.
     private ArrayList<RadioStation> radioStationArrayList;
     private MediaPlayer mediaPlayer;
+
     // creating a constructor for our variables.
     public Adapter(ArrayList<RadioStation> radioStationArrayList, Context context) {
         this.radioStationArrayList = radioStationArrayList;
@@ -69,9 +70,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
 
         public void onPlayClick() {
-            if (mediaPlayer.isPlaying()) {
-                stopPlaying();
-            }
+            stopPlaying();
             startPlaying();
         }
 
